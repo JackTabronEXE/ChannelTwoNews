@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { getWelcome, getNews } from '../apiClient'
 import Articles from './Articles'
 import MainArticle from './MainArticle'
+import Heading from './Heading'
 
 function App() {
   const [welcomeStatement, setWelcomeStatement] = useState('')
@@ -29,6 +30,7 @@ function App() {
       <h1>{welcomeStatement}</h1>
         {news && 
         <div>
+				<Heading />
         <MainArticle headline={news[0]} />
          <Articles data={news}/>
          </div>

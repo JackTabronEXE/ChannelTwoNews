@@ -6,7 +6,9 @@ const router = express.Router()
 const apiKey = process.env.apiKey
 router.get('/', (req, res) => {
   return request
-    .get(`https://newsapi.org/v2/top-headlines?country=nz&apiKey=${apiKey}`)
+    .get(
+      `https://newsapi.org/v2/top-headlines?country=nz&category=technology&apiKey=${apiKey}`
+    )
     .set('User-Agent', 'userAgent')
     .then((response) => res.json(response.body))
     .catch((err) => console.log(err))

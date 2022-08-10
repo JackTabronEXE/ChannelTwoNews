@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const serverURL = 'http://localhost:3005/api/v1'
+const serverURL = '/api/v1'
 
 // *** EXAMPLE ***
 export function getWelcome() {

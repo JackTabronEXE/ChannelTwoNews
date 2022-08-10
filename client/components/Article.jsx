@@ -11,7 +11,8 @@ function Article({ data }) {
       <span className="news__author">{data.author}</span> <br />
       <span className="news__published">{data.publishedAt}</span> <br></br>
       <span className="news__source">{data.source.name}</span><br></br>
-      <a href={data.url}>Read more here</a>
+			<br></br>
+			<a href={data.url} className='ds-button2'> READ MORE HERE <br></br> </a>
     </div>
     </>
   );

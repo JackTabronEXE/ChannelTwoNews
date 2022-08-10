@@ -5,19 +5,24 @@ function MainArticle({ headline }) {
 
   return (
     <>
+		<div className='mainarticle'>
 			<br></br>
       <h2>TOP ARTICLE THIS HOUR:</h2>
       {headline && (
         <div>
           <h1> {headline.title} </h1>
-          <p> {headline.publishedAt} </p>
-          <p> {headline.author} </p>
-          <a href={headline.url}> Read more here</a> <br></br>
+          <h2> {headline.publishedAt} </h2>
+          <h2> {headline.author} </h2>
+					<br></br> 
           <img src={headline.urlToImage} />
-          <p> {headline.content} </p>
-          <br></br>
-        </div>
+          <h2> {headline.content} </h2>
+					<br></br>
+					<br></br>
+					<a href={headline.url} className='ds-button'> READ MORE HERE <br></br> </a>
+					<br></br>
+				</div>
       )}
+			</div>
     </>
   )
 }
